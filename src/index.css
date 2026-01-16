@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Character kick animation */
+@keyframes kick {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+
+  30% {
+    transform: scale(1.15) translateY(-15px) rotate(-3deg);
+  }
+
+  60% {
+    transform: scale(1.1) translateY(-10px) rotate(2deg);
+  }
+
+  100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+.animate-kick {
+  animation: kick 0.4s ease-out;
+}
+
+/* Pulse effect for score dial when scoring */
+@keyframes scorePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.score-pulse {
+  animation: scorePulse 0.3s ease-in-out;
+}
+
+/* Pulse animation for gaming title */
+@keyframes pulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 4px 12px rgba(0, 200, 255, 0.6));
+  }
+
+  50% {
+    filter: drop-shadow(0 4px 20px rgba(0, 255, 255, 0.9));
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
