@@ -8,6 +8,7 @@ import { LegacyGameScreen } from './features/station/LegacyGameScreen';
 import { ConnectedGameScreen } from './features/station/ConnectedGameScreen';
 import { PublicJoin } from './features/public/PublicJoin';
 import { PublicBoard } from './features/public/PublicBoard';
+import { LandingPage } from './features/LandingPage';
 
 // Auth
 import { AdminLogin } from './components/auth/AdminLogin';
@@ -18,7 +19,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to="/login/station" replace />} />
+                <Route path="/" element={<LandingPage />} />
 
                 {/* Auth Routes */}
                 <Route path="/login/admin" element={<AdminLogin />} />
